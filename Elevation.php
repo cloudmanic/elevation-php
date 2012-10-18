@@ -6,7 +6,7 @@ class Elevation
 	
 	static public function test()
 	{
-		echo "ASDFASDFASDF";
+		return 'ASDFASDFASDF';
 	}
 	
 	// ------------------ Exercises -------------------------- //
