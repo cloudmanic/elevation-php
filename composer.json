@@ -1,0 +1,7 @@
+{
+    "name": "elevation/elevation-php",
+    "version": "1.0.0",
+    "autoload": {
+        "classmap": {"Elevation": "/"}
+    }
+}
