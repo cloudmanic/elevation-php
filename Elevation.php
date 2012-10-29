@@ -75,6 +75,14 @@ class Elevation
 		self::set_data('which', $which . ',');
 	}
 	
+	//
+	// Set selects. Which cols do you want to include in the return.
+	//
+	public static function set_select($select)
+	{
+		self::set_data('select', $select . ',');
+	}
+	
 	// ----------------------- Non-API Getters --------------------------- //
 	
 	//
