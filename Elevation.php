@@ -67,6 +67,14 @@ class Elevation
 		self::$_apihost = $host;
 	}
 	
+	//
+	// Set which. Which datasets do you want to include in the return.
+	//
+	public static function set_which($which)
+	{
+		self::set_data('which', $which . ',');
+	}
+	
 	// ----------------------- Non-API Getters --------------------------- //
 	
 	//
