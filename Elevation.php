@@ -7,7 +7,7 @@
 
 class Elevation
 {
-	private static $_apihost = 'http://dev.elevationfit.dev/api/';
+	private static $_apihost = 'http://elevationfit.dev/api/';
 	private static $_request_url = '';
 	private static $_response = '';
 	private static $_raw_response = '';
