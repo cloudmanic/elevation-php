@@ -171,6 +171,21 @@ class Elevation
 		return self::_request('post');	
 	} 
 	
+	//
+	// Assigned Workouts - reorder workouts
+	//
+	static public function assigned_workouts_reorder($ids)
+	{
+		if(is_array($ids))
+		{
+			$ids = implode(',', $ids);
+		}
+	
+		self::set_data('ids', $ids);
+		self::$_request_url = self::$_apihost . 'assignedworkouts/reorder';
+		return self::_request('post');	
+	} 
+	
 	// ----------------- Private Functions -------------------- //
 
 	//
