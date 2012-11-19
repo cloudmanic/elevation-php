@@ -109,6 +109,17 @@ class Elevation
 		return self::$_apihost;
 	}
 	
+	// ------------------ Users ------------------------------- //
+	
+	//
+	// Me - get
+	//
+	static public function me_get()
+	{
+		self::$_request_url = self::$_apihost . 'users/me';
+		return self::_request('get');	
+	} 
+	
 	// ------------------ Exercises -------------------------- //
 
 	//
@@ -118,6 +129,46 @@ class Elevation
 	{
 		self::$_request_url = self::$_apihost . 'exercises/get';
 		return self::_request('get');	
+	} 
+	
+	// ------------------ Assigned Workouts ------------------- //
+	
+	//
+	// Assigned Workouts - get
+	//
+	static public function assigned_workouts_get()
+	{
+		self::$_request_url = self::$_apihost . 'assignedworkouts/get';
+		return self::_request('get');	
+	} 
+	
+	//
+	// Assigned Workouts - get by id
+	//
+	static public function assigned_workouts_get_by_id($id)
+	{
+		self::set_data('id', $id);
+		self::$_request_url = self::$_apihost . 'assignedworkouts/get';
+		return self::_request('get');	
+	} 
+	
+	//
+	// Assigned Workouts - create
+	//
+	static public function assigned_workouts_create()
+	{
+		self::$_request_url = self::$_apihost . 'assignedworkouts/create';
+		return self::_request('post');	
+	}
+	
+	//
+	// Assigned Workouts - delete
+	//
+	static public function assigned_workouts_delete($id)
+	{
+		self::set_data('ids', $id);
+		self::$_request_url = self::$_apihost . 'assignedworkouts/delete';
+		return self::_request('post');	
 	} 
 	
 	// ----------------- Private Functions -------------------- //
